@@ -1,0 +1,113 @@
+<html>
+
+    <head>
+        <title> Quiz </title>
+        <link type="text/css" href="assets/css/index.css" rel="stylesheet">
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/css/ripples.min.css" rel="stylesheet">
+        <link href="../assets/css/material-wfont.min.css" rel="stylesheet">
+        <link href="../assets/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div id="header" class="masthead">
+                    <script src="../assets/js/navbar.js"></script>
+                </div>
+            </div>
+        </div>
+        <div class="container wrapper">
+            <div class="row">
+                <div class="col-md-12 jumbotron" id="mainDisplay">
+                    <!--Title page-->
+                    <div id="title">
+                      <h1 id="titleText1">Arthropod Identification Quiz</h1>
+                      <button type="button" class="btn-lg btn-default" id="beginButton" onclick="beginButton()"><strong>Begin<i class="fa fa-2x fa-bug"></i></strong></button>
+                      <!--<h3 id="titleCredits">Created by the Caterpillars Count Team 2016</h3>-->
+                      <button type="button" class="btn-lg btn-success" id="statsButton1" onclick="statsButton()">View My Stats</button>
+                      <button type="button" class="btn-lg btn-info" id="loginButton" onclick="loginButton()" hidden>Log in</button>
+
+                    </div>
+                    <!--Quiz page-->
+                    <div id="quiz" class="text-center container-fluid" hidden>
+                      <img id="imageDisplay">
+                      <h4 id="questionDisplay">What order does the species shown belong to?</h4>
+                      <div class="row btn-group" data-toggle="buttons" id="answersDisplay" style="max-width: 600px">
+                        <label class="col-xs-12 col-md-4 btn btn-default" for="photoQuiz" onclick="enableSubmit()">
+                          <input type="radio" name="photoQuiz" value="Formicidae">Ants <span class="slightlySmaller">(Formicidae)</span>
+                        </label>
+                        <label class="col-xs-12 col-md-4 btn btn-default" for="photoQuiz" onclick="enableSubmit()">
+                          <input type="radio" name="photoQuiz" value="Sternorrhyncha">Aphids, Psyllids <span class="slightlySmaller">(Sternorrhyncha)</span>
+                        </label>
+                        <label class="col-xs-12 col-md-4 btn btn-default" for="photoQuiz" onclick="enableSubmit()">
+                          <input type="radio" name="photoQuiz" value="Hymenoptera">Bees and Wasps <span class="slightlySmaller">(Hymenoptera)</span>
+                        </label>
+
+                        <label class="col-xs-12 col-md-4 btn btn-default" for="photoQuiz" onclick="enableSubmit()">
+                          <input type="radio" name="photoQuiz" value="Coleoptera">Beetles <span class="slightlySmaller">(Coleoptera)</span>
+                        </label>
+                        <label class="col-xs-12 col-md-4 btn btn-default" for="photoQuiz" onclick="enableSubmit()">
+                          <input type="radio" name="photoQuiz" value="Lepidoptera larvae">Caterpillars <span class="slightlySmaller">(Lepidoptera Larvae)</span>
+                        </label>
+                        <label class="col-xs-12 col-md-4 btn btn-default" for="photoQuiz" onclick="enableSubmit()">
+                          <input type="radio" name="photoQuiz" value="Opiliones">Daddy longlegs <span class="slightlySmaller">(Opiliones)</span>
+                        </label>
+
+                        <label class="col-xs-12 col-md-4 btn btn-default" for="photoQuiz" onclick="enableSubmit()">
+                          <input type="radio" name="photoQuiz" value="Diptera">Flies <span class="slightlySmaller">(Diptera)</span>
+                        </label>
+                        <label class="col-xs-12 col-md-4 btn btn-default" for="photoQuiz" onclick="enableSubmit()">
+                          <input type="radio" name="photoQuiz" value="Orthoptera">Grasshoppers, Crickets <span class="slightlySmaller">(Orthoptera)</span>
+                        </label>
+                        <label class="col-xs-12 col-md-4 btn btn-default" for="photoQuiz" onclick="enableSubmit()">
+                          <input type="radio" name="photoQuiz" value="Auchenorrhyncha">Leafhoppers, Cicadas <span class="slightlySmaller">(Auchenorrhyncha)</span>
+                        </label>
+
+                        <label class="col-xs-12 col-md-4 btn btn-default" for="photoQuiz" onclick="enableSubmit()">
+                          <input type="radio" name="photoQuiz" value="Lepidoptera">Butterflies, Moths <span class="slightlySmaller">(Lepidoptera)</span>
+                        </label>
+                        <label class="col-xs-12 col-md-4 btn btn-default" for="photoQuiz" onclick="enableSubmit()">
+                          <input type="radio" name="photoQuiz" value="Araneae">Spiders <span class="slightlySmaller">(Araneae)</span>
+                        </label>
+                        <label class="col-xs-12 col-md-4 btn btn-default" for="photoQuiz" onclick="enableSubmit()">
+                          <input type="radio" name="photoQuiz" value="Heteroptera">True bugs <span class="slightlySmaller">(Heteroptera)</span>
+                        </label>
+                      </div>
+                      <br>
+                      <button type="button" class="btn-lg btn-success" id="submitButton" onclick="submitButton()">Submit</button>
+                      <button type="button" class="btn-lg btn-primary" id="nextButton" onclick="nextButton()">Next</button>
+                    </div>
+                    <!--Results page-->
+                    <div id="results" class="text-center container-fluid" hidden>
+                      <div id="resultImages" class="row"></div>
+                      <br><br><br>
+                      <button type="button" class="btn-lg btn-primary" id="replayButton" onclick="replayButton()">Take Another Quiz</button>
+                      <button type="button" class="btn-lg btn-success" id="statsButton2" onclick="statsButton()">View My Stats</button>
+                    </div>
+                    <!--Statistics page-->
+                    <div id="statistics" class="text-center container-fluid" hidden>
+                      <div id="statisticsTitle" class="col-sm-8 col-sm-offset-2"></div>
+                      <div class="col-sm-2"></div>
+                      <div class="col-sm-8"><div id="barGraph"></div></div>
+                      <div class="col-sm-4">
+                        <div id="donutGraph"></div>
+                        <br><br><br><br>
+                        <button type="button" class="btn-lg btn-info" id="replayButton" onclick="replayButton()">Take Another Quiz</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script type="text/javascript" src="assets/js/index.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/tooltip.min.js"></script>
+    <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="../assets/js/ripples.min.js"></script>
+    <script src="../assets/js/material.min.js"></script>
+    </body>
+
+</html>

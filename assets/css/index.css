@@ -1,0 +1,239 @@
+div.userInfo {
+	-webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);
+	-moz-box-shadow:    0px 3px 5px rgba(100, 100, 100, 0.49);
+	box-shadow:         0px 3px 5px rgba(100, 100, 100, 0.49);
+	background: #355D3D;
+	color: white;
+	height: 25px;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+}
+
+div.userInfo span{
+    float:left;
+    margin-left: 22px;
+    margin-right: 10px;
+}
+
+#signout{
+    float:right;
+    width: 70px;
+    height: 25px;
+}
+
+.style1 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.wrapper {
+	margin-top:1%;
+}
+
+#mainDisplay {
+	min-height: 620px;
+}
+
+.tooltip .tooltip-inner {
+    white-space: normal;
+    width: 145px;
+}
+
+.tooltip.in {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+
+.slightlySmaller{
+	font-size: 10px;
+}
+
+#answersDisplay{
+	max-width:895px !important;
+}
+
+#title {
+	min-height: 600px;
+    background-image: url(../images/caterpillar1.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;  
+}
+
+#titleText1{
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-size: 61px;
+	color: white;
+	position: absolute;
+	top: 50px;
+	left: 70px;
+	width: 506px;
+	text-align: left;
+	
+}
+
+#titleText2{
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-size: 50px;
+	color: white;
+	position: absolute;
+	top: 160px;
+	left: 180px;
+	
+}
+
+#beginButton{
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-size: 30px;
+	height: 120px;
+	width: 120px;
+	position: absolute;
+	bottom: 150px;
+	left: 250px;
+	color: white;
+}
+
+#beginButton i {
+	color: #eb2d53;
+}
+
+#statsButton1{
+	height: 50px;
+	width: 160px;
+	position: absolute;
+	bottom: 80px;
+	left: 230px;
+}
+
+#loginButton{
+	height: 50px;
+	width: 160px;
+	position: absolute;
+	bottom: 80px;
+	left: 230px;
+}
+
+#titleCredits {
+	font-family: Papyrus,fantasy;
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+}
+
+#quiz {
+	display: none;
+}
+
+#imageDisplay {
+	width: auto;
+	max-height: 320px;
+}
+
+label.btn.btn-default.active {
+  background-color: #5bc0de;
+}
+
+#results {
+	width: 1110;
+	height: 620;
+	background-color: black;
+}
+
+.resultImg {
+	/* put this back if results page needs resetting
+	flex-shrink:0;
+    min-width:100%;
+    min-height:100%;*/
+    max-width: 277.5px;
+    max-height: 150px;
+}
+
+.resultDiv {
+	max-height: 150px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    color: white;
+    position: relative;
+}
+
+.col-sm-6{
+	width:25% !important;
+}
+
+.correctIcon {
+	color:green;
+	font-size: 30px !important;
+	left: 237px;
+	z-index: 100;
+	top: 107px;
+	position: absolute;
+	background: white;
+	border-radius: 18px;
+	padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 1px;
+}
+
+.incorrectIcon{
+	color:red;
+	font-size: 30px !important;
+	left: 237px;
+	z-index: 100;
+	top: 107px;
+	position: absolute;
+	background: white;
+	border-radius: 18px;
+	padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 1px;
+}
+
+.incorrectLabel{
+	font-size: 15px;
+	top: -5px;
+	left: 7px;
+	position: relative;
+	color:black;
+}
+
+.correctLabel{
+	font-size: 15px;
+	top: -5px;
+	left: 12px;
+	position: relative;
+	color:black;
+}
+
+#statistics{
+	width: 1110;
+	height: 620;
+	background-image: url(../images/caterpillar2.JPG);
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    position: relative; 
+}
+
+#statisticsTitle{
+	margin-top: 20px;
+	border-radius: 10px;
+	background-color: #f4f4f4;
+}
+
+#barGraph{
+	margin-top: 30px;
+	height: 500px; 
+	width: 100%;
+}
+
+#donutGraph{
+	margin-top: 60px;
+	height: 300px; 
+	width: 100%;
+}
